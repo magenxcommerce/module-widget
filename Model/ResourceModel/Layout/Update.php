@@ -51,9 +51,7 @@ class Update extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
      * @param string $handle
      * @param \Magento\Framework\View\Design\ThemeInterface $theme
      * @param \Magento\Framework\App\ScopeInterface $store
-     *
      * @return string
-     * @throws \Magento\Framework\Exception\LocalizedException
      */
     public function fetchUpdatesByHandle(
         $handle,
@@ -71,16 +69,14 @@ class Update extends \Magento\Framework\Model\ResourceModel\Db\AbstractDb
                 $this->layoutUpdateCache[$cacheKey][$layout['handle']] .= $layout['xml'];
             }
         }
-        return $this->layoutUpdateCache[$cacheKey][$handle] ?? '';
+        return isset($this->layoutUpdateCache[$cacheKey][$handle]) ? $this->layoutUpdateCache[$cacheKey][$handle] : '';
     }
 
     /**
      * Get select to fetch updates by handle
      *
      * @param bool $loadAllUpdates
-     *
      * @return \Magento\Framework\DB\Select
-     * @throws \Magento\Framework\Exception\LocalizedException
      */
     protected function _getFetchUpdatesByHandleSelect($loadAllUpdates = false)
     {

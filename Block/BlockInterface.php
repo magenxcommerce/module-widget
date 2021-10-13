@@ -19,7 +19,6 @@ interface BlockInterface
 {
     /**
      * Add data to the widget.
-     *
      * Retains previous data in the widget.
      *
      * @param array $arr
@@ -36,7 +35,7 @@ interface BlockInterface
      *
      * @param string|array $key
      * @param mixed $value
-     * @return $this
+     * @return \Magento\Framework\DataObject
      */
     public function setData($key, $value = null);
 }
