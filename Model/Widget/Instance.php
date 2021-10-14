@@ -706,7 +706,7 @@ class Instance extends \Magento\Framework\Model\AbstractModel
     /**
      * Check if widget parameter doesn't contains payload
      *
-     * @param string $param
+     * @param $param
      * @throws LocalizedException
      */
     private function validateWidgetParameters(string $param): void
