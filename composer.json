@@ -1,0 +1,39 @@
+{
+    "name": "magenxcommerce/module-widget",
+    "description": "N/A",
+    "type": "magento2-module",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+    ],
+    "config": {
+        "sort-packages": true
+    },
+    "version": "101.2.3",
+    "require": {
+        "php": "~7.3.0||~7.4.0",
+        "magenxcommerce/framework": "103.0.*",
+        "magenxcommerce/module-backend": "102.0.*",
+        "magenxcommerce/module-catalog": "104.0.*",
+        "magenxcommerce/module-cms": "104.0.*",
+        "magenxcommerce/module-email": "101.1.*",
+        "magenxcommerce/module-store": "101.1.*",
+        "magenxcommerce/module-theme": "101.1.*",
+        "magenxcommerce/module-variable": "100.4.*",
+        "magenxcommerce/module-ui": "101.2.*"
+    },
+    "suggest": {
+        "magenxcommerce/module-widget-sample-data": "Sample Data version: 100.4.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Magento\\Widget\\": ""
+        }
+    },
+    "replace": {
+        "magento/module-widget": "*"
+    }
+}
